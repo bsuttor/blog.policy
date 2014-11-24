@@ -1,0 +1,6 @@
+[report]
+include =
+    src/blog/*
+omit =
+    */test*
+    */upgrades/*
