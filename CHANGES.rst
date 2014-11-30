@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-1.0 (unreleased)
-----------------
+0.1b1 (2014-11-30)
+------------------
 
 - Initial release.
   [bsuttor]
