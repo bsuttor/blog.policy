@@ -44,6 +44,10 @@ setup(
         'plone.api',
         'setuptools',
         'blog.post',
+        'sc.social.like',
+        'collective.quickupload',
+        'collective.contentrules.yearmonth',
+        'plonetheme.bootstrap',
     ],
     extras_require={
         'test': [

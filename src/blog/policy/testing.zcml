@@ -4,6 +4,7 @@
     i18n_domain="blog.policy">
 
   <include file="configure.zcml" />
+  <include package="blog.post" file="testing.zcml" />
 
   <genericsetup:registerProfile
       name="testing"

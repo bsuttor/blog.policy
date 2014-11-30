@@ -3,5 +3,6 @@
   <version>1</version>
   <dependencies>
     <dependency>profile-blog.policy:default</dependency>
+    <dependency>profile-blog.post:testing</dependency>
   </dependencies>
 </metadata>

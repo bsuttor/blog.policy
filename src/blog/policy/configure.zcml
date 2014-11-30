@@ -11,6 +11,11 @@
     
     <include package="plone.api" />
     <include package="blog.post" />
+    <include package="sc.social.like" />
+    <include package="collective.contentrules.yearmonth" />
+    <include package="collective.quickupload" />
+    <include package="plonetheme.bootstrap" />
+
 
     <genericsetup:registerProfile
         name="default"
