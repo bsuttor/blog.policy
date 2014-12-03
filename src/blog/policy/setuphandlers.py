@@ -7,7 +7,7 @@ from plone.contentrules.engine.assignments import RuleAssignment
 from Products.CMFCore.interfaces._events import IActionSucceededEvent
 from zope import component
 from zope.globalrequest import getRequest
-
+from plone import api
 
 def isNotCurrentProfile(context):
     return context.readDataFile("blogpolicy_marker.txt") is None
@@ -20,6 +20,21 @@ def post_install(context):
     portal = context.getSite()
     request = getRequest()
     initialize_archive_rules(portal, request)
+
+def inittialize_home_collection(portal):
+    collection = api.content.create(container=portal, type='Collection', title='Blogs', id='blogs')
+    query = [
+        {'i': 'portal_type',
+         'o': 'plone.app.querystring.operation.selection.is',
+         'v': ['blog_post']},
+    ]
+    collection.setQuery(query)
+    collection.setSort_on('created')
+    collection.setLayout('blogs_view')
+    api.content.transition(obj=collection, transition='publish')
+    collection.reindexObject()
+
+    portal.setDefaultPage('blog')
 
 
 def initialize_archive_rules(portal, request):
