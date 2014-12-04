@@ -2,12 +2,14 @@
 from plone.contentrules.rule.interfaces import IRuleAction, IRuleCondition
 from plone.contentrules.engine.interfaces import IRuleStorage,\
     IRuleAssignmentManager
-from plone.app.contentrules.rule import Rule, get_assignments
+from plone.app.contentrules.rule import Rule
+from plone.app.contentrules import api as apirules
 from plone.contentrules.engine.assignments import RuleAssignment
 from Products.CMFCore.interfaces._events import IActionSucceededEvent
 from zope import component
 from zope.globalrequest import getRequest
 from plone import api
+
 
 def isNotCurrentProfile(context):
     return context.readDataFile("blogpolicy_marker.txt") is None
@@ -20,8 +22,10 @@ def post_install(context):
     portal = context.getSite()
     request = getRequest()
     initialize_archive_rules(portal, request)
+    initialize_home_collection(portal)
 
-def inittialize_home_collection(portal):
+
+def initialize_home_collection(portal):
     collection = api.content.create(container=portal, type='Collection', title='Blogs', id='blogs')
     query = [
         {'i': 'portal_type',
@@ -30,11 +34,11 @@ def inittialize_home_collection(portal):
     ]
     collection.setQuery(query)
     collection.setSort_on('created')
+    collection.setSort_reversed(True)
     collection.setLayout('blogs_view')
     api.content.transition(obj=collection, transition='publish')
     collection.reindexObject()
-
-    portal.setDefaultPage('blog')
+    portal.setDefaultPage('blogs')
 
 
 def initialize_archive_rules(portal, request):
@@ -101,12 +105,10 @@ def _create_rule(portal, rule_id, title, event):
 
 
 def _activate_rule(rule_id, context=None):
-    storage = component.getUtility(IRuleStorage)
-    rule = storage.get(rule_id)
     assignable = IRuleAssignmentManager(context)
     assignment = assignable.get(rule_id, None)
     if not assignment:
         assignment = assignable[rule_id] = RuleAssignment(rule_id)
     assignment.enabled = True
     assignment.bubbles = True
-    get_assignments(rule).insert('/'.join(context.getPhysicalPath()))
+    apirules.assign_rule(context, assignment.__name__)
