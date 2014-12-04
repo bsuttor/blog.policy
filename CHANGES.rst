@@ -5,7 +5,8 @@ Changelog
 0.1b2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update instalation scripts.
+  [bsuttor]
 
 
 0.1b1 (2014-11-30)
