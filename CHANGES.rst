@@ -5,7 +5,8 @@ Changelog
 0.1b3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add collective.recaptcha
+  [bsuttor]
 
 
 0.1b2 (2014-12-04)

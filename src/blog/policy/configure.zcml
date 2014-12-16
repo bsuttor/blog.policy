@@ -15,6 +15,7 @@
     <include package="collective.contentrules.yearmonth" />
     <include package="collective.quickupload" />
     <include package="plonetheme.bootstrap" />
+    <include package="collective.recaptcha" />
 
 
     <genericsetup:registerProfile

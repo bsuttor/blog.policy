@@ -48,6 +48,7 @@ setup(
         'collective.quickupload',
         'collective.contentrules.yearmonth',
         'plonetheme.bootstrap',
+        'collective.recaptcha',
     ],
     extras_require={
         'test': [
