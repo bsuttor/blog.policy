@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1b4 (unreleased)
+0.1b4 (2014-12-16)
 ------------------
 
 - Use plone.formwidget.captcha instead of collective.recaptcha.
