@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1b3 (unreleased)
+0.1b3 (2014-12-16)
 ------------------
 
 - Add collective.recaptcha
