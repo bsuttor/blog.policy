@@ -5,7 +5,8 @@ Changelog
 0.1b4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Use plone.formwidget.captcha instead of collective.recaptcha.
+  [bsuttor]
 
 
 0.1b3 (2014-12-16)
