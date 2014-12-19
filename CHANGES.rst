@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1b5 (unreleased)
+0.1b5 (2014-12-19)
 ------------------
 
 - Use max-width for content instead of width (responsive rule).
