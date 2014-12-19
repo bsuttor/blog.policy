@@ -2,7 +2,7 @@
     display: none;
 }
 .comments-link {
-   
+
 }
 
 #content .comments-link a:link {
@@ -19,7 +19,7 @@
     color: #ffffff;
 }
 div#content {
-    width: 1170px;
+    max-width: 1170px;
     margin: auto;
 }
 

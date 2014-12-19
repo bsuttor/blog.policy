@@ -5,7 +5,8 @@ Changelog
 0.1b5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Use max-width for content instead of width (responsive rule).
+  [bsuttor]
 
 
 0.1b4 (2014-12-16)
