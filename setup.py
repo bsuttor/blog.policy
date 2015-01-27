@@ -19,7 +19,7 @@ long_description = (
 
 setup(
     name='blog.policy',
-    version='0.1b6.dev0',
+    version='0.1b6',
     description="A policy for blog suite",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
