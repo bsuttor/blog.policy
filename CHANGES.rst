@@ -5,7 +5,8 @@ Changelog
 0.1b6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update css.
+  [bsuttor]
 
 
 0.1b5 (2014-12-19)

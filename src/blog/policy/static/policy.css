@@ -27,3 +27,12 @@ div#content {
     float: left;
     height: 9.5em;
 }
+
+.blog_picture {
+    float: left;
+    padding-right: 15px;
+}
+
+#content-core article.blog_articles {
+    margin-bottom: 50px;
+}
