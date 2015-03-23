@@ -5,7 +5,8 @@ Changelog
 0.1b7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Css update for blog_picture size
+  [bsuttor]
 
 
 0.1b6 (2015-01-27)
