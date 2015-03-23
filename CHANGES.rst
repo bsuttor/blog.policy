@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1b7 (unreleased)
+0.1b7 (2015-03-23)
 ------------------
 
 - Css update for blog_picture size
