@@ -49,6 +49,7 @@ setup(
         'collective.contentrules.yearmonth',
         'plonetheme.bootstrap',
         'plone.formwidget.captcha',
+        'collective.atomrss',
     ],
     extras_require={
         'test': [

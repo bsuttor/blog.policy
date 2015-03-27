@@ -5,7 +5,8 @@ Changelog
 0.1b8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add collective.atomrss dependency.
+  [bsuttor]
 
 
 0.1b7 (2015-03-23)
