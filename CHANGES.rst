@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1b8 (unreleased)
+0.1b8 (2015-03-27)
 ------------------
 
 - Add collective.atomrss dependency.
