@@ -5,7 +5,8 @@ Changelog
 0.1b9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add upgrade step for removing addon no compatbile with Plone5.
+  [bsuttor]
 
 
 0.1b8 (2015-03-27)
