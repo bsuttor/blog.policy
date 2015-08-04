@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1b9 (unreleased)
+0.1b9 (2015-08-04)
 ------------------
 
 - Add upgrade step for removing addon no compatbile with Plone5.
