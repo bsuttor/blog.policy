@@ -6,6 +6,7 @@ from plone.app.contentrules.rule import Rule
 from plone.app.contentrules import api as apirules
 from plone.contentrules.engine.assignments import RuleAssignment
 from Products.CMFCore.interfaces._events import IActionSucceededEvent
+from Products.CMFCore.utils import getToolByName
 from zope import component
 from zope.globalrequest import getRequest
 from plone import api
@@ -112,3 +113,11 @@ def _activate_rule(rule_id, context=None):
     assignment.enabled = True
     assignment.bubbles = True
     apirules.assign_rule(context, assignment.__name__)
+
+
+def uninstall_for_preparing_plone5(context):
+    """Remove plonetheme.bootstrap"""
+    setup = getToolByName(context, 'portal_setup')
+    setup.runAllImportStepsFromProfile('profile-plonetheme.bootstrap:uninstall')
+    setup.runAllImportStepsFromProfile('profile-sc.social.like:uninstall')
+    setup.runAllImportStepsFromProfile('profile-collective.quickupload:uninstall')

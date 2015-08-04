@@ -8,14 +8,14 @@
 
 
     <five:registerPackage package="." initialize=".initialize" />
-    
+
     <include package="plone.api" />
     <include package="blog.post" />
-    <include package="sc.social.like" />
     <include package="collective.contentrules.yearmonth" />
+    <include package="sc.social.like" />
     <include package="collective.quickupload" />
-    <include package="plonetheme.bootstrap" />
     <include package="plone.formwidget.captcha" />
+    <include package="plonetheme.bootstrap" />
 
 
     <genericsetup:registerProfile
@@ -32,6 +32,15 @@
         description="Post install import step from blog.policy"
         handler=".setuphandlers.post_install">
     </genericsetup:importStep>
+
+    <genericsetup:upgradeStep
+        source="1"
+        destination="2"
+        title="Uninstall for preparing plone5"
+        description="Uninstall for preparing Plone 5"
+        profile="blog.policy:default"
+        handler=".setuphandlers.uninstall_for_preparing_plone5"
+        />
 
     <browser:resourceDirectory
       name="blog.policy"
