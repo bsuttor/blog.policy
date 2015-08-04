@@ -44,11 +44,12 @@ setup(
         'plone.api',
         'setuptools',
         'blog.post',
+        'collective.atomrss',
+        'collective.contentrules.yearmonth',
         'sc.social.like',
         'collective.quickupload',
-        'collective.contentrules.yearmonth',
-        'collective.atomrss',
-        'plonetheme.bootstrap',
+        'plone.formwidget.captcha',
+        'plonetheme.bootstrap'
     ],
     extras_require={
         'test': [
