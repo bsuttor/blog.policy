@@ -48,6 +48,7 @@ setup(
         'collective.quickupload',
         'collective.contentrules.yearmonth',
         'collective.atomrss',
+        'plonetheme.bootstrap',
     ],
     extras_require={
         'test': [
