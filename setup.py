@@ -46,10 +46,6 @@ setup(
         'blog.post',
         'collective.atomrss',
         'collective.contentrules.yearmonth',
-        'sc.social.like',
-        'collective.quickupload',
-        'plone.formwidget.captcha',
-        'plonetheme.bootstrap'
     ],
     extras_require={
         'test': [
