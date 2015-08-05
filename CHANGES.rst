@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1b10 (unreleased)
+0.1b10 (2015-08-05)
 -------------------
 
 - Remove old packages dependencies.
