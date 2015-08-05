@@ -5,7 +5,8 @@ Changelog
 0.1b10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Remove old packages dependencies.
+  [bsuttor]
 
 
 0.1b9 (2015-08-04)
