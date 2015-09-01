@@ -45,7 +45,7 @@ setup(
         'setuptools',
         'blog.post',
         'collective.atomrss',
-        'collective.contentrules.yearmonth',
+        'plone.formwidget.recaptcha'
     ],
     extras_require={
         'test': [

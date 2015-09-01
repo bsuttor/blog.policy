@@ -21,8 +21,8 @@ def post_install(context):
     if isNotCurrentProfile(context):
         return
     portal = context.getSite()
-    request = getRequest()
-    initialize_archive_rules(portal, request)
+    # request = getRequest()
+    # initialize_archive_rules(portal, request)
     initialize_home_collection(portal)
 
 
